@@ -1,0 +1,133 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "sap.ui.solaris",
+		"type": "application",
+		 "i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ui.solaris.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "2.30",
+			"libs": {
+			    "sap.ui.core": {},
+				"sap.m": {}
+			}
+		}, 
+		"contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+		"models": {
+		"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.ui.solaris.i18n.i18n"
+				}
+			}
+		},
+		 "routing": {
+           		"config": {
+                	"routerClass": "sap.m.routing.Router",
+                	"viewType": "XML",
+                	"viewPath": "sap.ui.solaris.view",
+                	"controlId": "SolarisApp",
+               		"controlAggregation": "pages",
+               		"transition": "fade",
+					"bypassed": {
+								"target": "notFound"
+					}
+            	},
+		 		"routes": [
+		 		{
+                	"pattern": "",
+               	 	"name": "home",
+                	"target": "startPage"
+          		},
+          		{
+                	"pattern": "angajati",
+               	 	"name": "angajati",
+                	"target": "angajati"
+          		},
+          		{
+                	"pattern": "proiecte",
+               	 	"name": "proiecte",
+                	"target": "proiecte"
+          		},
+          		{
+                	"pattern": "asignariProiecte",
+               	 	"name": "asignariProiecte",
+                	"target": "asignariProiecte"
+          		},
+          		{
+                	"pattern": "formular",
+               	 	"name": "formular",
+                	"target": "formular"
+          		},
+          		{
+                	"pattern": "rapoarteIndividuale",
+               	 	"name": "rapoarteIndividuale",
+                	"target": "rapoarteIndividuale"
+          		},          		
+          		{
+                	"pattern": "raportGeneral",
+               	 	"name": "raportGeneral",
+                	"target": "raportGeneral"
+          		}    		
+          		
+          		],
+          		
+           		"targets": {
+           			"startPage": {
+                    	"viewName": "Startpage",
+                    	"viewLevel": 1
+               	 	},  
+                	"angajati": {
+                    	"viewName": "Angajati",
+                    	"viewLevel": 1
+               	 	},               	 	
+               	 	"proiecte": {
+                    	"viewName": "Proiecte",
+                    	"viewLevel": 1
+               	 	},
+               	 	"asignariProiecte": {
+                    	"viewName": "AsignariProiecte",
+                    	"viewLevel": 1
+               	 	},
+               	 	"formular": {
+                    	"viewName": "Formular",
+                    	"viewLevel": 1
+               	 	},
+               	 	"rapoarteIndividuale": {
+                    	"viewName": "RapoarteIndividuale",
+                    	"viewLevel": 1
+               	 	},
+               	 	"raportGeneral": {
+                    	"viewName": "RaportGeneral",
+                    	"viewLevel": 1
+               	 	},
+               	 	"notFound": {
+						"viewId": "notFound",
+						"viewName": "NotFound",
+						"transition": "show"
+				}	
+         		}
+         }
+	}
+}

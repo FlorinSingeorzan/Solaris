@@ -1,0 +1,123 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.solaris.controller.RapoarteIndividuale" xmlns="sap.m"
+	xmlns:unified="sap.ui.unified" xmlns:layout="sap.ui.commons.layout">
+	<Shell> 
+	<Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+	<mvc:XMLView viewName="sap.ui.solaris.view.Toolbar" /> 
+	<content>
+		  <layout:AbsoluteLayout  class="sapUiLargeMargin"  horizontalScrolling="Hidden" verticalScrolling="Auto">
+				<layout:positions>
+					<layout:PositionContainer >
+						<layout:control  class="sapUiMediumMarginStart" >
+							<List class="sapUiMediumMarginStart"  mode="SingleSelectMaster" width="558.3611450195312px" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All"
+								growing="true" growingThreshold="20" growingScrollToLoad="true">
+								<infoToolbar>
+									<Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+										<content>
+											<Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+										</content>
+									</Toolbar>
+								</infoToolbar>
+								<headerToolbar>
+									<Toolbar visible="true" enabled="true" width="" design="Solid">
+										<content>
+											<SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+										</content>
+									</Toolbar>
+								</headerToolbar>
+								<items>
+									<ObjectListItem intro="" title="Nume angajat 1" number="Status zi curenta" numberUnit="" numberState="None" type="Active" selected="true"
+										showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Proiect 1 - 50%" active="false"/>
+											<ObjectAttribute text="Proiect 2 - 50%" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume angajat 2" number="Status zi curenta" numberUnit="" numberState="None" type="Active" selected="false"
+										showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Proiect 1 - 25%" active="false"/>
+											<ObjectAttribute text="Proiect 2 - 75%" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume angajat 3" number="Status zi curenta" numberUnit="" numberState="None" type="Active" selected="false"
+										showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Proiect 1 - 25%" active="false"/>
+											<ObjectAttribute text="Proiect 2 - 75%" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume angajat 4" number="Status zi curenta" numberUnit="" numberState="None" type="Active" selected="false"
+										showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Proiect 1 - 100%" active="false"/>
+											<ObjectAttribute text="" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+								</items>
+							</List>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="809px" top="92px">
+						<layout:control>
+							<unified:Calendar months="1" singleSelection="true" intervalSelection="true" firstDayOfWeek="0" visible="true">
+								<unified:specialDates/>
+								<unified:selectedDates/>
+							</unified:Calendar>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="556px" top="18px">
+						
+					</layout:PositionContainer>
+					<layout:PositionContainer left="821px" top="486px">
+						<layout:control>
+							<Text text="Zile libere platite" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="820px" top="544px">
+						<layout:control>
+							<Text text="Zile libere neplatite" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="951px" top="468px">
+						<layout:control>
+							<TextArea rows="1" cols="20" maxLength="0" wrapping="None" visible="true"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="950px" top="529px">
+						<layout:control>
+							<TextArea rows="1" cols="20" maxLength="0" wrapping="None" visible="true"/>
+						</layout:control>
+					</layout:PositionContainer>
+				</layout:positions>
+			</layout:AbsoluteLayout>
+		</content>
+		<footer/>
+		<headerContent/>
+		<customHeader/>
+	</Page>
+</Shell> 
+</mvc:View>

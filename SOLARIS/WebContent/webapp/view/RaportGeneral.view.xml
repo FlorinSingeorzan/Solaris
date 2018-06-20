@@ -1,0 +1,428 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.solaris.controller.RaportGeneral" xmlns="sap.m"
+	xmlns:chart="sap.chart" xmlns:data="sap.chart.data" xmlns:layout="sap.ui.commons.layout">
+	<Shell>
+	
+	<Page showHeader="false" title="Raport General" showFooter="false" showNavButton="false" enableScrolling="false">
+		<mvc:XMLView viewName="sap.ui.solaris.view.Toolbar" /> 
+		<content>
+			<layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+				<layout:positions>
+					<layout:PositionContainer >
+						<layout:control>
+							<IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
+								selectedKey="Ok">
+								<items>
+									<IconTabFilter icon="sap-icon://calendar" iconColor="Positive" text="Zile libere" count="" design="Vertical" showAll="false"
+										textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+										<content>
+											<Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true">
+												<infoToolbar/>
+												<headerToolbar>
+													<Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+														<content>
+															<SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+															<ToolbarSpacer width=""/>
+															<Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true"
+																iconDensityAware="false"/>
+														</content>
+														<tooltip/>
+													</Toolbar>
+												</headerToolbar>
+												<columns>
+													<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+														<header>
+															<Text text="Nume angajat" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+														</header>
+														<footer/>
+													</Column>
+													<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+														<header>
+															<Text text="Zile libere platite" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+														</header>
+														<footer/>
+													</Column>
+													<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+														<header>
+															<Text text="Zile libere neplatite" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+														</header>
+														<footer/>
+													</Column>
+													<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+														<header>
+															<Text text="Zile concediu ramase" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+														</header>
+														<footer/>
+													</Column>
+												</columns>
+												<items>
+													<ColumnListItem type="Active">
+														<cells>
+															<ObjectIdentifier title="Angajat1" text="" titleActive="false" visible="true"/>
+															<Text text="2" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+															<ObjectNumber number="2" unit="" emphasized="true" state="None"/>
+															<ObjectNumber number="7" unit="" emphasized="true" state="None"/>
+														</cells>
+													</ColumnListItem>
+													<ColumnListItem type="Active">
+														<cells>
+															<ObjectIdentifier title="Angajat2" text="" titleActive="false" visible="true"/>
+															<Text text="3" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+															<ObjectNumber number="0" unit="" emphasized="true" state="None"/>
+															<ObjectNumber number="10" unit="" emphasized="true" state="None"/>
+														</cells>
+													</ColumnListItem>
+													<ColumnListItem type="Active">
+														<cells>
+															<ObjectIdentifier title="Angajat3" text="" titleActive="false" visible="true"/>
+															<Text text="2" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+															<ObjectNumber number="4" unit="" emphasized="true" state="None"/>
+															<ObjectNumber number="15" unit="" emphasized="true" state="None"/>
+														</cells>
+													</ColumnListItem>
+												</items>
+											</Table>
+											<chart:Chart
+												id="sap_m_Page_0-content-sap_m_IconTabBar-1500987821584-items-sap_m_IconTabFilter-1-content-sap_chart_ColumnChart-1501063052593"
+												width="100%" height="450px" visibleDimensions="__id" visibleMeasures="mea0" chartType="column" selectionMode="Single" uiConfig="{}"
+												vizProperties="{plotArea:{dataLabel:{visible: true,hideWhenOverlap:true}}}">
+												<chart:dimensions>
+													<data:Dimension name="__id" label="Luna" role="category" textProperty="dim0"/>
+												</chart:dimensions>
+												<chart:measures>
+													<data:Measure name="mea0" label="Zile libere" role="axis2"/>
+												</chart:measures>
+											</chart:Chart>
+										</content>
+									</IconTabFilter>
+									<IconTabSeparator icon="" iconDensityAware="false"/>
+									<IconTabFilter icon="sap-icon://employee" iconColor="Positive" text="Cereri" count="" design="Vertical" showAll="false"
+										textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+										<content>
+											<IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
+												selectedKey="Ok">
+												<items>
+													<IconTabFilter icon="sap-icon://message-success" iconColor="Positive" text="Aprobate" count="" design="Vertical" showAll="false"
+														textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+														<content>
+															<Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true">
+																<infoToolbar/>
+																<headerToolbar>
+																	<Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+																		<content>
+																			<SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+																			<ToolbarSpacer width=""/>
+																			<Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true"
+																				iconDensityAware="false"/>
+																		</content>
+																		<tooltip/>
+																	</Toolbar>
+																</headerToolbar>
+																<columns>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Nume angajat" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Data inceput" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Data sfarsit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Tip cerere" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																</columns>
+																<items>
+																	<ColumnListItem type="Active">
+																		<cells>
+																			<ObjectIdentifier title="Angajat1" text="" titleActive="false" visible="true"/>
+																			<Text text="04.06.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="10.06.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<ObjectNumber number="3" unit="" emphasized="true" state="None"/>
+																		</cells>
+																	</ColumnListItem>
+																	<ColumnListItem type="Active">
+																		<cells>
+																			<ObjectIdentifier title="Angajat2" text="" titleActive="false" visible="true"/>
+																			<Text text="27.08.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="02.09.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<ObjectNumber number="1" unit="" emphasized="true" state="None"/>
+																		</cells>
+																	</ColumnListItem>
+																	<ColumnListItem type="Active">
+																		<cells>
+																			<ObjectIdentifier title="Angajat3" text="" titleActive="false" visible="true"/>
+																			<Text text="02.10.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="13.10.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<ObjectNumber number="5" unit="" emphasized="true" state="None"/>
+																		</cells>
+																	</ColumnListItem>
+																</items>
+															</Table>
+														</content>
+													</IconTabFilter>
+													<IconTabSeparator icon="" iconDensityAware="false"/>
+													<IconTabFilter icon="sap-icon://message-error" iconColor="Positive" text="Neaprobate" count="" design="Vertical" showAll="false"
+														textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+														<content>
+															<Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true">
+																<infoToolbar/>
+																<headerToolbar>
+																	<Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+																		<content>
+																			<SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+																			<Button text="Aproba" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+																			<Button text="Refuza" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+																			<ToolbarSpacer width=""/>
+																			<Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true"
+																				iconDensityAware="false"/>
+																		</content>
+																		<tooltip/>
+																	</Toolbar>
+																</headerToolbar>
+																<columns>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Nume angajat" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Data inceput" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Data sfarsit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Tip cerere" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																</columns>
+																<items>
+																	<ColumnListItem type="Active">
+																		<cells>
+																			<ObjectIdentifier title="Angajat1" text="" titleActive="false" visible="true"/>
+																			<Text text="03.08.2017" width="76px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="03.08.2017" width="76px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<ObjectNumber number="7" unit="" emphasized="true" state="None"/>
+																		</cells>
+																	</ColumnListItem>
+																	<ColumnListItem type="Active">
+																		<cells>
+																			<ObjectIdentifier title="Angajat2" text="" titleActive="false" visible="true"/>
+																			<Text text="02.09.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="05.09.2017" width="76px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<ObjectNumber number="10" unit="" emphasized="true" state="None"/>
+																		</cells>
+																	</ColumnListItem>
+																</items>
+															</Table>
+														</content>
+													</IconTabFilter>
+												</items>
+												<content/>
+											</IconTabBar>
+										</content>
+									</IconTabFilter>
+									<IconTabSeparator icon="" iconDensityAware="false"/>
+									<IconTabFilter icon="sap-icon://world" iconColor="Positive" text="Delegatii" count="" design="Vertical" showAll="false"
+										textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+										<content>
+											<IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
+												selectedKey="Ok">
+												<items>
+													<IconTabFilter icon="sap-icon://message-success" iconColor="Positive" text="Aprobate" count="" design="Vertical" showAll="false"
+														textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+														<content>
+															<Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true">
+																<infoToolbar/>
+																<headerToolbar>
+																	<Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+																		<content>
+																			<SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+																			<ToolbarSpacer width=""/>
+																			<Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true"
+																				iconDensityAware="false"/>
+																		</content>
+																		<tooltip/>
+																	</Toolbar>
+																</headerToolbar>
+																<columns>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Nume angajat" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Data inceput" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Data sfarsit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Locatie" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Tip cerere" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																</columns>
+																<items>
+																	<ColumnListItem type="Active">
+																		<cells>
+																			<ObjectIdentifier title="Angajat1" text="" titleActive="false" visible="true"/>
+																			<Text text="05.06.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="10.06.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="Brasov" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<ObjectNumber number="3" unit="" emphasized="true" state="None"/>
+																		</cells>
+																	</ColumnListItem>
+																	<ColumnListItem type="Active">
+																		<cells>
+																			<ObjectIdentifier title="Angajat2" text="" titleActive="false" visible="true"/>
+																			<Text text="27.08.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="02.09.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="Brasov" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<ObjectNumber number="1" unit="" emphasized="true" state="None"/>
+																		</cells>
+																	</ColumnListItem>
+																	<ColumnListItem type="Active">
+																		<cells>
+																			<ObjectIdentifier title="Angajat3" text="" titleActive="false" visible="true"/>
+																			<Text text="02.10.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="13.10.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="Cluj-Napoca" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<ObjectNumber number="2" unit="" emphasized="true" state="None"/>
+																		</cells>
+																	</ColumnListItem>
+																</items>
+															</Table>
+														</content>
+													</IconTabFilter>
+													<IconTabSeparator icon="" iconDensityAware="false"/>
+													<IconTabFilter icon="sap-icon://message-error" iconColor="Positive" text="Neaprobate" count="" design="Vertical" showAll="false"
+														textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+														<content>
+															<Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true">
+																<infoToolbar/>
+																<headerToolbar>
+																	<Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+																		<content>
+																			<SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+																			<Button text="Aproba" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+																			<Button text="Anuleaza" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+																			<ToolbarSpacer width=""/>
+																			<Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true"
+																				iconDensityAware="false"/>
+																		</content>
+																		<tooltip/>
+																	</Toolbar>
+																</headerToolbar>
+																<columns>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Nume angajat" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Data inceput" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Data sfarsit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Locatie" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																	<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+																		<header>
+																			<Text text="Tip cerere" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																		</header>
+																		<footer/>
+																	</Column>
+																</columns>
+																<items>
+																	<ColumnListItem type="Active">
+																		<cells>
+																			<ObjectIdentifier title="Angajat1" text="" titleActive="false" visible="true"/>
+																			<Text text="03.08.2017" width="76px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="03.08.2017" width="76px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="Brasov" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<ObjectNumber number="1" unit="" emphasized="true" state="None"/>
+																		</cells>
+																	</ColumnListItem>
+																	<ColumnListItem type="Active">
+																		<cells>
+																			<ObjectIdentifier title="Angajat2" text="" titleActive="false" visible="true"/>
+																			<Text text="02.09.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="05.09.2017" width="76px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<Text text="Cluj-Napoca" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+																			<ObjectNumber number="2" unit="" emphasized="true" state="None"/>
+																		</cells>
+																	</ColumnListItem>
+																</items>
+															</Table>
+														</content>
+													</IconTabFilter>
+												</items>
+												<content/>
+											</IconTabBar>
+										</content>
+									</IconTabFilter>
+								</items>
+								<content/>
+							</IconTabBar>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="599px" top="40px">
+						
+					</layout:PositionContainer>
+				</layout:positions>
+			</layout:AbsoluteLayout>
+		</content>
+		<footer/>
+		<headerContent/>
+		<customHeader/>
+	</Page>
+	</Shell>
+</mvc:View>

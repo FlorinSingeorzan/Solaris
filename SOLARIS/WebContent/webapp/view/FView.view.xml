@@ -1,0 +1,146 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.suite.ui.Tdc.controller.FView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Angajati">
+		<content>
+	 <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="" iconColor="Default" text="Angajati activi" count="4" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                         <!-- items="{/AngajatiSet}"-->
+                            <Table 
+                            	id="tabelAngajatiActivi" 
+                            	
+                            	selectionMode="MultiToggle"
+								visibleRowCount="7"
+								enableSelectAll="false"
+								threshold="15"
+								enableBusyIndicator="true"
+								ariaLabelledBy="title"
+								width="100%" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar>
+                                    <Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <Button text="Adauga" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Button text="Sterge" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Button text="Inactiv" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <ToolbarSpacer width=""/>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+                                            <Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Button text="" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Button text="" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </content>
+                                        <tooltip/>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top"  demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Nume" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top"  demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Data angajarii" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top"  demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Locatie" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="235px" hAlign="Right" vAlign="Top" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Email" width="203.00006103515625px" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Manager" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                
+                                <items>
+                                   <ColumnListItem>
+								<cells>
+									<Text text="{Nume}"/>
+									<Text text="{Data_angajarii}"/>
+									<Text text="{Locatie}"/>
+									<Text text="{Email}"/>
+									<Text text="{Manager}"/>
+								</cells>
+							</ColumnListItem>
+                                </items>
+                            </Table>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="" iconColor="Default" text="Angajati inactivi" count="1" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Table 
+	                            id="tableAngajatiInactivi"
+								selectionMode="MultiToggle"
+								visibleRowCount="7"
+								enableSelectAll="false"
+								
+								width="100%"
+								showSeparators="All" 
+								growing="true" 
+								growingThreshold="20" 
+								growingScrollToLoad="true">
+								
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <Button text="Activ" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Text text="" width="42.63000000px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <ToolbarSpacer width=""/>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+                                            <Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Button text="" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Button text="" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </content>
+                                        <tooltip/>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Nume" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Data primei anagajari" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                   
+                                </items>
+                            </Table>
+                        </content>
+                    </IconTabFilter>
+                </items>
+                <content/>
+            </IconTabBar>
+		</content>
+	</Page>
+</core:View>

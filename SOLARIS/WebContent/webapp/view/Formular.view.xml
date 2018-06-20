@@ -1,0 +1,184 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.solaris.controller.Formular" xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.commons.layout">
+	 <mvc:XMLView viewName="sap.ui.solaris.view.Toolbar" /> 
+	<Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+		<content>
+			<layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+				<layout:positions>
+					<layout:PositionContainer left="227px" top="56px">
+						<layout:control>
+							<IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
+								selectedKey="Ok">
+								<items>
+									<IconTabFilter icon="sap-icon://employee" iconColor="Positive" text="Cerere" count="" design="Vertical" showAll="false"
+										textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+										<content>
+											<form:Form width="785px" editable="true" visible="true">
+												<form:title>
+													<core:Title text="" level="Auto"/>
+												</form:title>
+												<form:formContainers>
+													<form:FormContainer visible="true">
+														<form:formElements>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Nume angajat" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+																</form:fields>
+															</form:FormElement>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Tip cerere" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+																		<items>
+																			<core:Item text="Item" enabled="true"/>
+																			<core:Item text="Item" enabled="true"/>
+																			<core:Item text="Item" enabled="true"/>
+																		</items>
+																	</ComboBox>
+																</form:fields>
+															</form:FormElement>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Data inceput" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+																</form:fields>
+															</form:FormElement>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Data sfarsit" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+																</form:fields>
+															</form:FormElement>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Comentariu" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+																</form:fields>
+															</form:FormElement>
+														</form:formElements>
+														<form:title/>
+													</form:FormContainer>
+												</form:formContainers>
+												<form:layout>
+													<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+												</form:layout>
+											</form:Form>
+										</content>
+									</IconTabFilter>
+									<IconTabSeparator icon="" iconDensityAware="false"/>
+									<IconTabFilter icon="sap-icon://world" iconColor="Positive" text="Delegatie" count="" design="Vertical" showAll="false"
+										textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+										<content>
+											<form:Form width="785px" editable="true" visible="true">
+												<form:title>
+													<core:Title text="" level="Auto"/>
+												</form:title>
+												<form:formContainers>
+													<form:FormContainer visible="true">
+														<form:formElements>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Nume angajat" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+																</form:fields>
+															</form:FormElement>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Tip delegatie" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+																		<items>
+																			<core:Item text="Item" enabled="true"/>
+																			<core:Item text="Item" enabled="true"/>
+																			<core:Item text="Item" enabled="true"/>
+																		</items>
+																	</ComboBox>
+																</form:fields>
+															</form:FormElement>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Data inceput" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+																</form:fields>
+															</form:FormElement>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Data sfarsit" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+																</form:fields>
+															</form:FormElement>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Locatie" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+																</form:fields>
+															</form:FormElement>
+															<form:FormElement visible="true">
+																<form:label>
+																	<Label text="Comentariu" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+																</form:label>
+																<form:fields>
+																	<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+																</form:fields>
+															</form:FormElement>
+														</form:formElements>
+														<form:title/>
+													</form:FormContainer>
+												</form:formContainers>
+												<form:layout>
+													<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+												</form:layout>
+											</form:Form>
+										</content>
+									</IconTabFilter>
+								</items>
+								<content>
+									<Text text="Tab Bar Content goes here ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								</content>
+							</IconTabBar>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="559px" top="562px">
+						<layout:control>
+							<Button text="Trimite" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+								press="_onButtonPress"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="139px" top="291px">
+						<layout:control>
+							<ObjectStatus text="" state="None"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="563px" top="22px">
+						<layout:control>
+							<Title text="Formular" titleStyle="Auto" width="auto" textAlign="Begin" visible="true"/>
+						</layout:control>
+					</layout:PositionContainer>
+				</layout:positions>
+			</layout:AbsoluteLayout>
+		</content>
+		<footer/>
+		<headerContent/>
+		<customHeader/>
+	</Page>
+</mvc:View>

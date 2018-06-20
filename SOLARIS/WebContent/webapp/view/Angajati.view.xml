@@ -1,0 +1,182 @@
+<mvc:View
+
+	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+    controllerName="sap.ui.solaris.controller.Angajati" xmlns:html="http://www.w3.org/1999/xhtml"  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    displayBlock="true">
+	<Shell>
+   
+	<Page showHeader="false" title="Angajati" showFooter="false" showNavButton="false" enableScrolling="false">
+	   <mvc:XMLView viewName="sap.ui.solaris.view.Toolbar" /> 
+		<content justifyContent="Center">
+	          <IconTabBar  expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="" iconColor="Default" text="Angajati activi" count="4" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                          
+                            <Table 
+                            	id="tabelAngajatiActivi" 
+                            	mode="SingleSelectMaster"
+								selectionChange="onSelectionChange"
+								items="{/AngajatiSet}"
+								visibleRowCount="7"
+								enableSelectAll="false"				
+								threshold="15"
+								enableBusyIndicator="true"
+								ariaLabelledBy="title"
+								width="100%" 
+								noDataText="No data"
+								showSeparators="All" 
+								growing="true" 
+								growingThreshold="20" 
+								growingScrollToLoad="true"
+								class="TableStyle">								
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar>
+                                    <Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <Button icon="sap-icon://add" text="Adauga" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="onAdd"/>
+                                            <Button icon="sap-icon://delete" text="Sterge" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="onDelete"/>
+                                            <Button icon="sap-icon://edit" text="Modifica" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="onEdit"/>
+                                            <Button icon="sap-icon://save" text="Salveaza" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="onSave"/>
+                                            <Button text="Inactiv" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <ToolbarSpacer width=""/>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+                                           
+                                        </content>
+                                        <tooltip/>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top"  demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{/#Angajati/Nume/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                   
+                                        <footer/>
+                                    </Column>
+                                    
+                                    <Column width="auto" hAlign="Left" vAlign="Top"  demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{/#Angajati/Prenume/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                   
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top"  demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{/#Angajati/DataAngajarii/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top"  demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{/#Angajati/Locatie/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="235px" hAlign="Right" vAlign="Top" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{/#Angajati/Email/@sap:label}" width="203.00006103515625px" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{/#Angajati/Manager/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                             <items>
+                                   <ColumnListItem id="List">
+                                   <cells>
+									<Input value="{Nume}" editable="false" class="InputStyle" /> 
+									<Input value="{Prenume}" editable="false" class="InputStyle" /> 
+									<Input value="{DataAngajarii}" editable="false" class="InputStyle"/>
+									<Input value="{Locatie}" editable="false" class="InputStyle"/>
+									<Input value="{Email}" editable="false" class="InputStyle"/>
+									<Input value="{NumeManager}" editable="false" class="InputStyle"/>
+									
+								</cells>
+							</ColumnListItem>
+                                </items>
+                            </Table>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="" iconColor="Default" text="Angajati inactivi" count="1" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Table 
+	                            id="tableAngajatiInactivi"
+								selectionMode="MultiToggle"
+								visibleRowCount="7"
+								enableSelectAll="false"
+								
+								width="100%"
+								showSeparators="All" 
+								growing="true" 
+								growingThreshold="20" 
+								growingScrollToLoad="true">
+								
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+                                        <content>
+                                            <Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <Button text="Activ" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Text text="" width="42.63000000px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <ToolbarSpacer width=""/>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+                                            <Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Button text="" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <Button text="" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </content>
+                                        <tooltip/>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                             <Text text="{/#Angajati/Nume/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                     <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                             <Text text="{/#Angajati/Prenume/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{/#Angajati/DataAngajarii/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                     <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="{/#Angajati/NrTelefon/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                   
+                                </items>
+                            </Table>
+                        </content>
+                    </IconTabFilter>
+                </items>
+                <content/>
+            </IconTabBar>
+		</content>
+	</Page>
+	</Shell>
+</mvc:View>

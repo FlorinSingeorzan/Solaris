@@ -1,0 +1,222 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.solaris.controller.AsignariProiecte" xmlns="sap.m"
+	xmlns:layout="sap.ui.commons.layout">
+	
+	
+	<Shell>
+	<Page showHeader="false" title="Asignare proiecte" showFooter="false" showNavButton="true" enableScrolling="false">
+		 <mvc:XMLView viewName="sap.ui.solaris.view.Toolbar" /> 
+		<content>
+			<layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+				<layout:positions>
+					<layout:PositionContainer left="39px" top="86px">
+						<layout:control>
+							<List mode="SingleSelectMaster" width="540.3611450195312px" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All"
+								growing="true" growingThreshold="20" growingScrollToLoad="true">
+								<infoToolbar>
+									<Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+										<content>
+											<Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+										</content>
+									</Toolbar>
+								</infoToolbar>
+								<headerToolbar>
+									<Toolbar visible="true" enabled="true" width="" design="Solid">
+										<content>
+											<SearchField placeholder="Angajati" showSearchButton="true" visible="true" width="100%"/>
+										</content>
+									</Toolbar>
+								</headerToolbar>
+								<items>
+									<ObjectListItem intro="" title="Nume angajat 1" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Proiect 1 - 50%" active="false"/>
+											<ObjectAttribute text="Proiect 2 - 50%" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume angajat 2" number="" numberUnit="" numberState="None" type="Active" selected="false"
+										showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Proiect 1 - 25%" active="false"/>
+											<ObjectAttribute text="Proiect 2 - 75%" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume angajat 3" number="" numberUnit="" numberState="None" type="Active" selected="false"
+										showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Proiect 1 - 25%" active="false"/>
+											<ObjectAttribute text="Proiect 2 - 75%" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume angajat 4" number="" numberUnit="" numberState="None" type="Active" selected="false"
+										showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Proiect 1 - 100%" active="false"/>
+											<ObjectAttribute text="" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Rol" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+								</items>
+							</List>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="700px" top="83px">
+						<layout:control>
+							<List mode="SingleSelectMaster" width="540.3611450195312px" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All"
+								growing="true" growingThreshold="20" growingScrollToLoad="true">
+								<infoToolbar>
+									<Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+										<content>
+											<Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+										</content>
+									</Toolbar>
+								</infoToolbar>
+								<headerToolbar>
+									<Toolbar visible="true" enabled="true" width="" design="Solid">
+										<content>
+											<SearchField placeholder="Proiecte" showSearchButton="true" visible="true" width="100%"/>
+										</content>
+									</Toolbar>
+								</headerToolbar>
+								<items>
+									<ObjectListItem intro="" title="Nume proiect 1" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Coordonator" active="false"/>
+											<ObjectAttribute text="Contact DE" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Data inceput" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Data sfarsit" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume proiect 2" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Coordonator" active="false"/>
+											<ObjectAttribute text="Contact DE" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Data inceput" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Data sfarsit" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume proiect 3" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Coordonator" active="false"/>
+											<ObjectAttribute text="Contact DE" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Data inceput" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Data sfarsit" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume proiect 4" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Coordonator" active="false"/>
+											<ObjectAttribute text="Contact DE" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Data inceput" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Data sfarsit" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume proiect 5" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Coordonator" active="false"/>
+											<ObjectAttribute text="Contact DE" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Data inceput" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Data sfarsit" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+									<ObjectListItem intro="" title="Nume proiect 6" number="" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false">
+										<attributes>
+											<ObjectAttribute text="Coordonator" active="false"/>
+											<ObjectAttribute text="Contact DE" active="false"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="Data inceput" state="None"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="Data sfarsit" state="None"/>
+										</secondStatus>
+									</ObjectListItem>
+								</items>
+							</List>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="502px" top="11px">
+					
+					</layout:PositionContainer>
+					<layout:PositionContainer left="127px" top="651px">
+						<layout:control>
+							<Label text="Rol :" design="Standard" width="41.111114501953125px" required="true" textAlign="Begin" textDirection="Inherit"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="43px" top="713px">
+						<layout:control>
+							<Label text="Procent implicare :" design="Standard" width="124.875px" required="true" textAlign="Begin" textDirection="Inherit"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="161px" top="635px">
+						<layout:control>
+							<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="417.25px" valueHelpOnly="false" maxLength="0"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="157px" top="693px">
+						<layout:control>
+							<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="413.875px" valueHelpOnly="false" maxLength="0"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="514px" top="775px">
+						<layout:control>
+							<Button text="Adauga" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+						</layout:control>
+					</layout:PositionContainer>
+					<layout:PositionContainer left="18px" top="110px">
+						<layout:control>
+							<Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+						</layout:control>
+					</layout:PositionContainer>				
+					
+				</layout:positions>
+			</layout:AbsoluteLayout>
+		</content>
+		<footer/>
+		<headerContent/>
+		<customHeader/>
+	</Page>
+	</Shell>
+</mvc:View>
