@@ -15,7 +15,7 @@ sap.ui.define([
 				window.history.go(-1);
 			} else {
 				sap.ui.core.UIComponent.getRouterFor(this).navTo("asignariProiecte", {}, true);
-			}
+			} 
 		}
 	});
 });  
