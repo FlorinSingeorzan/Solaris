@@ -1,14 +1,24 @@
 {
 	"_version": "1.7.0",
 	"sap.app": {
-		"id": "sap.ui.solaris",
+		"id": "sap.ui.solaris.webapp",
 		"type": "application",
 		 "i18n": "i18n/i18n.properties",
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
-		}
+		},
+		"dataSources": {
+        "Test": {
+            "uri": "proxy/http/evolhebhdb.evosoft.com:8010/sap/opu/odata/SAP/ZKD_SOLARIS_D_SRV/",
+            "type": "OData",
+            "settings": {
+                "odataVersion": "2.0",
+                "localUri": "proxy/http/evolhebhdb.evosoft.com:8010/sap/opu/odata/SAP/ZKD_SOLARIS_D_SRV/"
+            }
+        }
+    }
 	},
 	"sap.ui": {
 		"technology": "UI5",
@@ -20,7 +30,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "sap.ui.solaris.view.App",
+			"viewName": "sap.ui.solaris.webapp.view.App",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -40,13 +50,22 @@
 				"settings": {
 					"bundleName": "sap.ui.solaris.i18n.i18n"
 				}
-			}
+			},
+		"Test": {
+            "type": "sap.ui.model.odata.v2.ODataModel",
+            "settings": {
+                "defaultOperationMode": "Server",
+                "defaultBindingMode": "TwoWay",
+                "defaultCountMode": "None"
+            },
+            "dataSource": "Test"
+        }
 		},
 		 "routing": {
            		"config": {
                 	"routerClass": "sap.m.routing.Router",
                 	"viewType": "XML",
-                	"viewPath": "sap.ui.solaris.view",
+                	"viewPath": "sap.ui.solaris.webapp.view",
                 	"controlId": "SolarisApp",
                		"controlAggregation": "pages",
                		"transition": "fade",

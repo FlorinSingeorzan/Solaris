@@ -1,5 +1,5 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m" controllerName="sap.ui.solaris.controller.Toolbar"
+	xmlns="sap.m" controllerName="sap.ui.solaris.webapp.controller.Toolbar"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Toolbar height="43px" class="subHeaderDesign">
 		<FlexBox width="auto" height="42px" class="sapUiNoMargin">

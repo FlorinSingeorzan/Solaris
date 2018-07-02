@@ -1,11 +1,11 @@
-<mvc:View controllerName="sap.ui.solaris.controller.Startpage"
+<mvc:View controllerName="sap.ui.solaris.webapp.controller.Startpage"
 	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"
 	xmlns:layout="sap.ui.layout" xmlns:microchart="sap.suite.ui.microchart"  xmlns:html="http://www.w3.org/1999/xhtml">
 	<Shell>
 	<App>
 			<Page showHeader="false" backgroundDesign="Info" >
 				<Panel>	
-				 <mvc:XMLView viewName="sap.ui.solaris.view.Toolbar" /> 
+				 <mvc:XMLView viewName="sap.ui.solaris.webapp.view.Toolbar" /> 
 				
 				<FlexBox  id="sdadas" wrap="Wrap" width="auto" height="auto" justifyContent="Center" 
 						backgroundDesign="Translucent">

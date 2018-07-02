@@ -1,9 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
-	  "sap/ui/Device",
-	"sap/ui/model/odata/v2/ODataModel",
-	"sap/ui/model/odata/ODataMetadata",
-], function (UIComponent,Device, ODataModel,ODataMetadata) {
+	//"sap/ui/model/odata/v2/ODataModel",
+	//"sap/ui/model/odata/ODataMetadata",
+], function (UIComponent) {
 	"use strict";
 
 	return UIComponent.extend("sap.ui.solaris.Component", {
@@ -19,25 +18,31 @@ sap.ui.define([
 	        // create the views based on the url/hash
 	        this.getRouter().initialize();
 	    
-	        /*var oDeviceModel = new JSONModel(Device);
-			oDeviceModel.setDefaultBindingMode("OneWay");
-			this.setModel(oDeviceModel, "device");*/
-	        // var sServiceUrl = this.getMetadata().getManifestEntry("sap.app").dataSources["default"].uri;
+	       
+	        //  var serviceUrl = "proxy/http/evolhebhdb.evosoft.com:8010/sap/opu/odata/SAP/ZKD_SOLARIS_D_SRV/";	       
 	         
-	         var serviceUrl = "proxy/http/evolhebhdb.evosoft.com:8010/sap/opu/odata/SAP/ZKD_SOLARIS_D_SRV/";
-		     var oModel =new sap.ui.model.odata.v2.ODataModel(serviceUrl, true);
-		     
-		     if (oModel.isBindingModeSupported(sap.ui.model.BindingMode.OneWay)) { // true
-		        oModel.setDefaultBindingMode(sap.ui.model.BindingMode.OneWay);
-		     }
+	        var sServiceUrl = this.getMetadata().getManifestEntry("sap.app").dataSources["Test"].uri;
+	      
+	        var oModel =new sap.ui.model.odata.v2.ODataModel(sServiceUrl);
+	        sap.ui.getCore().setModel(oModel);
+		    /*oModel.attachMetadataLoaded(null, function(){
+				   var oMetadata = oModel.getServiceMetadata();
+				   console.log(oMetadata);
+		     	},null); */
 		     this.setModel(oModel);
+		    
+		    
+		  //   if (oModel.isBindingModeSupported(sap.ui.model.BindingMode.TwoWay)) { // true
+		  //      oModel.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
+		  //   }
+		   
 
 		      //this._createMetadataPromise(oModel);
 	     },
 	 	createContent: function() {
 			// create root view
 			return sap.ui.view("AppView", {
-				viewName: "sap.ui.solaris.view.App",
+				viewName: "sap.ui.solaris.webapp.view.App",
 				type: "XML"
 			});
 		}

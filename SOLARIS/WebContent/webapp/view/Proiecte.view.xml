@@ -1,9 +1,9 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.solaris.controller.Proiecte" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.solaris.webapp.controller.Proiecte" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     displayBlock="true">
 
    <Shell>
 	<Page showHeader="false" title="Proiecte" showFooter="true" showNavButton="false">
-	 <mvc:XMLView viewName="sap.ui.solaris.view.Toolbar" /> 	
+	 <mvc:XMLView viewName="sap.ui.solaris.webapp.view.Toolbar" /> 	
 		<content>
 			<IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
 				selectedKey="Ok">
@@ -54,57 +54,44 @@
 								<columns>
 									<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
 										<header>
-											<Text text="Nume proiect" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											 <Text text="{/#Proiecte/NumeProiect/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
 										</header>
 										<footer/>
 									</Column>
 									<Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader"
 										mergeDuplicates="false">
 										<header>
-											<Text text="Coordonator" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											 <Text text="{/#Proiecte/Coordonator/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
 										</header>
 										<footer/>
 									</Column>
 									<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
 										<header>
-											<Text text="Contact DE" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											 <Text text="{/#Proiecte/ContactDe/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
 										</header>
 										<footer/>
 									</Column>
 									<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 										<header>
-											<Text text="Data inceput" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										 <Text text="{/#Proiecte/DataInceput/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
 										</header>
 										<footer/>
 									</Column>
 									<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
 										<header>
-											<Text text="Data sfarsit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+										 <Text text="{/#Proiecte/DataSfarsit/@sap:label}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
 										</header>
 										<footer/>
 									</Column>
 								</columns>
 								<items>
-									<ColumnListItem type="Navigation">
+									<ColumnListItem type="List">
 										<cells>
-											<Link text="Proiect1" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false"
-												subtle="false"/>
-											<Text text="Coordonator1" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
-											<Text text="Contact1" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
-											<Text text="01.01.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
-											<Link text="10.09.2017" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false"
-												subtle="false"/>
-										</cells>
-									</ColumnListItem>
-									<ColumnListItem type="Navigation">
-										<cells>
-											<Link text="Proiect2" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false"
-												subtle="false"/>
-											<Text text="Coordonator2" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
-											<Text text="Contact2" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
-											<Text text="01.04.2017" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
-											<Link text="01.12.2017" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false"
-												subtle="false"/>
+											<Input value="{NumeProiect}" editable="false" class="InputStyle" /> 
+											<Input value="{Coordonator}" editable="false" class="InputStyle" /> 
+											<Input value="{ContactDe}" editable="false" class="InputStyle"/>
+											<Input value="{DataInceput}" editable="false" class="InputStyle"/>
+											<Input value="{DataSfarsit}" editable="false" class="InputStyle"/>									
 										</cells>
 									</ColumnListItem>
 								</items>

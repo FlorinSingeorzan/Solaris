@@ -3,7 +3,8 @@ sap.ui.define([
 	"sap/m/MessageToast",
 	"sap/ui/model/odata/v2/ODataModel",
 	"sap/ui/model/json/JSONModel",
-	"sap/ui/model/odata/OperationMode", "sap/m/MessageBox",
+	"sap/ui/model/odata/OperationMode", 
+	"sap/m/MessageBox",
 	"sap/m/Dialog", "sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator"
 ], 
@@ -12,44 +13,20 @@ function (Controller, MessageToast, ODataModel, JSONModel,
 		FilterOperator) {
 	"use strict";
 
-	return Controller.extend("sap.ui.solaris.controller.Angajati", {
+	return Controller.extend("sap.ui.solaris.webapp.controller.Angajati", {
 
 		onInit : function() {
+			var oModel =  sap.ui.getCore().getModel();//get the model
 			
-		/*	  var sServiceUrl = this.getMetadata().getManifestEntry("sap.app").dataSources["Test"].uri;
-			  var oModel =new sap.ui.model.odata.v2.ODataModel(sServiceUrl,false);
-			  sap.ui.getCore().setModel(oModel);*/
-			var oModel = new sap.ui.model.odata.v2.ODataModel("proxy/http/evolhebhdb.evosoft.com:8010/sap/opu/odata/SAP/ZKD_SOLARIS_D_SRV/");
-		   // var oModel =  sap.ui.getCore().getModel("default");//get the model
+			var oView = this.getView();
 			
-		/*	oModel.refreshMetadata().then( function( response ) {
-			    console.log( oModel.getServiceMetadata() );
-			    debugger;
-			} );
-			oModel.read('/AngajatiSet', //entity set to be fetched
-			           {
-			            success:function(oData,oResponse){ //success handler
-			                console.log(oData);
-			            },
-			            error: function(oError) { // error handler
-			                console.log(oError);
-
-			            }
-			        });*/
-			sap.ui.getCore().setModel(oModel);
-		    var oView = this.getView();
-			this
-					.initTabelAngajatiActivi(oModel);
-			this
-					.initTabelAngajatiInactivi(oModel);
+			this.initTabelAngajatiActivi(oModel);
+			this.initTabelAngajatiInactivi(oModel);
 
 		},
 
-		initTabelAngajatiActivi : function(
-				oModel) {
-
-			var table = this
-					.byId("tabelAngajatiActivi");
+		initTabelAngajatiActivi : function(oModel) {
+			var table = this.byId("tabelAngajatiActivi");
 
 			// var filterArray = new Array();
 			// var Filter = new
@@ -86,9 +63,9 @@ function (Controller, MessageToast, ODataModel, JSONModel,
 											value : "{NumeManager}"
 										}) ]
 					});
+			
 			table.setModel(oModel);
-			table
-					.bindAggregation(
+			table.bindAggregation(
 							"items",
 							{
 								path : "/AngajatiSet",
@@ -99,8 +76,7 @@ function (Controller, MessageToast, ODataModel, JSONModel,
 												sap.ui.model.FilterOperator.EQ,
 												'1'))
 							});
-			table
-					.attachBrowserEvent(
+			table.attachBrowserEvent(
 							"dblclick",
 							this.onDblClick);
 		},
@@ -139,8 +115,7 @@ function (Controller, MessageToast, ODataModel, JSONModel,
 										}) ]
 					});
 			table.setModel(oModel);
-			table
-					.bindAggregation(
+			table.bindAggregation(
 							"items",
 							{
 								path : "/AngajatiSet",
@@ -155,8 +130,7 @@ function (Controller, MessageToast, ODataModel, JSONModel,
 												sap.ui.model.FilterOperator.EQ,
 												'3'))
 							});
-			table
-					.attachBrowserEvent(
+			table.attachBrowserEvent(
 							"dblclick",
 							this.onDblClick);
 		},
@@ -319,7 +293,8 @@ function (Controller, MessageToast, ODataModel, JSONModel,
 			var oModel = sap.ui.getCore()
 					.getModel();
 			var newA = {};
-			newA.OidAngajat = "1";
+			newA.OidAngajat = "0";
+			newA.Status=1;
 			var mParams = {
 				context : null,
 				success : function(oData,
@@ -337,13 +312,10 @@ function (Controller, MessageToast, ODataModel, JSONModel,
 			oModel.create("/AngajatiSet", newA,
 					mParams);
 		},
-		editLine : function() {
-			var oTable = this.getSource()
-					.getParent().getParent();
-			var oSelectedItems = oTable
-					.getItems();
-			var oCells = oSelectedItems[0]
-					.getCells();
+		editLine : function(oEvent) {			
+			var oTable = oEvent.getSource().getParent().getParent();
+			var oSelectedItems = oTable.getItems();
+			var oCells = oSelectedItems[0].getCells();
 
 			for (var j = 0; j < oCells.length; j++) {
 				oCells[j].setEditable(true);
@@ -351,7 +323,7 @@ function (Controller, MessageToast, ODataModel, JSONModel,
 		},
 		onAdd : function(oEvent) {
 			this.addLine(oEvent);
-			this.editLine();
+			this.editLine(oEvent);
 
 		},
 	});

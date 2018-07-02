@@ -10,12 +10,15 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		FilterOperator) {
 	"use strict";
 
-	return Controller.extend("sap.ui.solaris.controller.Proiecte", {
+	return Controller.extend("sap.ui.solaris.webapp.controller.Proiecte", {
 		
 		onInit: function() {
-		var oModel = new sap.ui.model.odata.v2.ODataModel("proxy/http/evolhebhdb.evosoft.com:8010/sap/opu/odata/SAP/ZKD_SOLARIS_D_SRV/");
-		sap.ui.getCore().setModel(oModel);
-	    var oView = this.getView();
+			var oModel =  sap.ui.getCore().getModel();//get the model
+			var oView = this.getView();
+			
+			//this.initTabelAngajatiActivi(oModel);
+			//this.initTabelAngajatiInactivi(oModel);
+
 		}
 	});
 }, /* bExport= */ true);

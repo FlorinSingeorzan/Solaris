@@ -1,9 +1,9 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.solaris.controller.RaportGeneral" xmlns="sap.m"
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.solaris.webapp.controller.RaportGeneral" xmlns="sap.m"
 	xmlns:chart="sap.chart" xmlns:data="sap.chart.data" xmlns:layout="sap.ui.commons.layout">
 	<Shell>
 	
 	<Page showHeader="false" title="Raport General" showFooter="false" showNavButton="false" enableScrolling="false">
-		<mvc:XMLView viewName="sap.ui.solaris.view.Toolbar" /> 
+		<mvc:XMLView viewName="sap.ui.solaris.webapp.view.Toolbar" /> 
 		<content>
 			<layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
 				<layout:positions>

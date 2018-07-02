@@ -5,7 +5,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 ], function(Controller, MessageBox, Utilities, History) {
 	"use strict";
 
-	return Controller.extend("sap.ui.solaris.controller.RaportGeneral", {
+	return Controller.extend("sap.ui.solaris.webapp.controller.RaportGeneral", {
 		
 		applyFiltersAndSorters: function(sControlId, sAggregationName) {
 			var oBindingInfo = this.getView().byId(sControlId).getBindingInfo(sAggregationName);

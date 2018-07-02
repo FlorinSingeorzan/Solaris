@@ -4,7 +4,7 @@ sap.ui.define([
 ], function(Controller,History) {    //tine cont de ordinea de sus
 	"use strict";
 
-	return Controller.extend("sap.ui.solaris.controller.NotFound", {
+	return Controller.extend("sap.ui.solaris.webapp.controller.NotFound", {
 		onInit: function() {  
 		},
 		onNavBack: function (oEvent) {

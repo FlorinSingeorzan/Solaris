@@ -6,7 +6,7 @@ sap.ui.define([
 ], function(Controller, MessageToast, JSONModel, NumberFormat) {    //tine cont de ordinea de sus
 	"use strict";
 
-sap.ui.controller("sap.ui.solaris.controller.Toolbar", {
+sap.ui.controller("sap.ui.solaris.webapp.controller.Toolbar", {
 
 	navHome: function(){
 		this.getOwnerComponent().getRouter().navTo("home");

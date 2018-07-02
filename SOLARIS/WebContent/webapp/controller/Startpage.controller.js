@@ -7,7 +7,7 @@ sap.ui.define([
 ], function(jQuery, Controller, JSONModel, NumberFormat, MobileLibrary) {
 	"use strict";
 
-	return Controller.extend("sap.ui.solaris.controller.Startpage", {
+	return Controller.extend("sap.ui.solaris.webapp.controller.Startpage", {
 		onInit: function() {
 		//	var sDataPath = jQuery.sap.getModulePath("sap.suite.ui.commons.PrjTest.model.data", "/News.json");
 		//	var oModel = new JSONModel(sDataPath);

@@ -1,5 +1,5 @@
 <mvc:View
-   controllerName="sap.ui.solaris.controller.NotFound"
+   controllerName="sap.ui.solaris.webapp.controller.NotFound"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
    <MessagePage

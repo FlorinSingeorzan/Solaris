@@ -5,7 +5,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 ], function(Controller, MessageBox, Utilities, History) {
 	"use strict";
 
-	return Controller.extend("sap.ui.solaris.controller.AsignariProiecte", {
+	return Controller.extend("sap.ui.solaris.webapp.controller.AsignariProiecte", {
 		
 	
 		onInit: function() {
